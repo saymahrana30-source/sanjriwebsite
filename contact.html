@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | Sanjri Youth Foundation</title>
+  <meta name="description" content="Get in touch with Sanjri Youth Foundation in Gorwa, Vadodara. Reach out for camps, partnerships, volunteering, or general queries.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top syf-navbar" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand syf-brand" href="index.html">
+        <img src="images/logo.png" alt="Sanjri Youth Foundation logo" class="syf-logo">
+        <span class="syf-brand-text">
+          Sanjri Youth<br><small>FOUNDATION</small>
+        </span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#syfNav" aria-controls="syfNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="syfNav">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="programs.html">Programs</a></li>
+          <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="volunteer.html">Volunteer</a></li>
+          <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
+          <li class="nav-item ms-lg-2">
+            <a class="btn syf-btn-donate" href="donate.html"><i class="fa-solid fa-heart me-1"></i> Donate</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== PAGE HEADER ===== -->
+  <header class="syf-page-header">
+    <div class="container">
+      <div class="syf-breadcrumb justify-content-center">
+        <a href="index.html">Home</a> <span>/</span> <span>Contact</span>
+      </div>
+      <h1>Get In Touch</h1>
+      <p>Questions, partnerships, or just want to say hello &mdash; we'd love to hear from you.</p>
+    </div>
+  </header>
+
+  <!-- ===== CONTACT INFO + FORM ===== -->
+  <section class="syf-section">
+    <div class="container">
+      <div class="row g-5">
+
+        <!-- Contact Info -->
+        <div class="col-lg-5 syf-reveal">
+          <span class="syf-eyebrow syf-eyebrow-dark">Contact Information</span>
+          <h2 class="syf-section-title">Reach us directly</h2>
+          <p class="syf-section-text mb-4">Drop by our office in Gorwa, send us a message, or follow our pages for updates on the next camp.</p>
+
+          <div class="syf-contact-card">
+            <i class="fa-solid fa-location-dot"></i>
+            <div>
+              <h6>Our Office</h6>
+              <p>Sanjri Youth Foundation Office,<br>B 10/11, Navdurga Society, Near Rupam Society, Gorwa,<br>Vadodara, Gujarat 390016</p>
+            </div>
+          </div>
+
+          <div class="syf-contact-card">
+            <i class="fa-solid fa-envelope"></i>
+            <div>
+              <h6>Email Us</h6>
+              <p>samarathod702@gmail.com</p>
+            </div>
+          </div>
+
+          <div class="syf-contact-card">
+            <i class="fa-solid fa-clock"></i>
+            <div>
+              <h6>Office Hours</h6>
+              <p>Monday &ndash; Saturday, 10:00 AM &ndash; 7:00 PM<bsar>Camp timings vary &mdash; check our gallery &amp; social pages</p>
+            </div>
+          </div>
+
+          <div class="syf-contact-social">
+            <span>Follow us:</span>
+            <div class="syf-social">
+              <a href="https://www.facebook.com/share/17QJpF1PeW/?mibextid=wwXIfr" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="col-lg-7 syf-reveal">
+          <div class="syf-form-card">
+
+            <div id="syfContactFormSuccess" class="syf-alert-success" role="alert">
+              <i class="fa-solid fa-circle-check"></i>
+              <div>
+                <strong>Message sent!</strong>
+                <span>Thanks for reaching out &mdash; we'll get back to you as soon as we can.</span>
+              </div>
+              <button type="button" class="syf-alert-close" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+
+            <form id="syfContactForm" class="syf-form" data-success-target="syfContactFormSuccess" novalidate>
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label for="conName" class="syf-form-label">Full Name <span>*</span></label>
+                  <input type="text" class="form-control syf-form-control" id="conName" name="conName" required minlength="2">
+                  <div class="syf-form-feedback">Please enter your full name.</div>
+                </div>
+                <div class="col-md-6">
+                  <label for="conEmail" class="syf-form-label">Email Address <span>*</span></label>
+                  <input type="email" class="form-control syf-form-control" id="conEmail" name="conEmail" required>
+                  <div class="syf-form-feedback">Please enter a valid email address.</div>
+                </div>
+                <div class="col-md-6">
+                  <label for="conPhone" class="syf-form-label">Phone Number</label>
+                  <input type="tel" class="form-control syf-form-control" id="conPhone" name="conPhone" pattern="[0-9]{10}" placeholder="Optional, 10-digit mobile">
+                  <div class="syf-form-feedback">Please enter a valid 10-digit phone number.</div>
+                </div>
+                <div class="col-md-6">
+                  <label for="conSubject" class="syf-form-label">Subject <span>*</span></label>
+                  <select class="form-select syf-form-control" id="conSubject" name="conSubject" required>
+                    <option value="" selected disabled>Choose a topic</option>
+                    <option value="volunteer">Volunteering</option>
+                    <option value="donation">Donations</option>
+                    <option value="partnership">Partnership / Collaboration</option>
+                    <option value="media">Media / Press</option>
+                    <option value="general">General Query</option>
+                  </select>
+                  <div class="syf-form-feedback">Please select a subject.</div>
+                </div>
+                <div class="col-12">
+                  <label for="conMessage" class="syf-form-label">Message <span>*</span></label>
+                  <textarea class="form-control syf-form-control" id="conMessage" name="conMessage" rows="5" required minlength="10" placeholder="Tell us what's on your mind..."></textarea>
+                  <div class="syf-form-feedback">Please enter a message of at least 10 characters.</div>
+                </div>
+                <div class="col-12 text-center mt-2">
+                  <button type="submit" class="btn syf-btn-primary syf-btn-form">
+                    <i class="fa-solid fa-paper-plane me-2"></i>Send Message
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== MAP ===== -->
+  <section class="syf-map-section syf-reveal">
+    <iframe
+        src="https://www.google.com/maps?q=B+10%2F11%2C+Navdurga+Society%2C+Near+Rupam+Society%2C+Gorwa%2C+Vadodara%2C+Gujarat+390016&output=embed"
+          width="100%"
+          height="100%"
+          style="border:0;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Sanjri Youth Foundation location map - Gorwa, Vadodara">
+      </iframe>
+  </section>
+
+  <!-- ===== CALL TO ACTION ===== -->
+  <section class="syf-cta">
+    <div class="container">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-7 syf-reveal">
+          <h2>Prefer to help directly?</h2>
+          <p>Volunteer your time or support our next camp with a contribution.</p>
+        </div>
+        <div class="col-lg-5 text-lg-end syf-reveal">
+          <a href="volunteer.html" class="btn syf-btn-light me-2 mb-2">Volunteer With Us</a>
+          <a href="donate.html" class="btn syf-btn-outline-light mb-2">Make a Donation</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+ 
+  <!-- ===== FOOTER ===== -->
+  <footer class="syf-footer">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4">
+          <a href="index.html" class="syf-footer-brand">
+            <img src="images/logo.png" alt="Sanjri Youth Foundation logo">
+            <span>Sanjri Youth<br><small>FOUNDATION</small></span>
+          </a>
+          <p class="syf-footer-text">A volunteer-driven youth foundation based in Gorwa, Vadodara, working in education, healthcare, women's empowerment, and community welfare.</p>
+          <div class="syf-social">
+            <a href="https://www.facebook.com/share/17QJpF1PeW/?mibextid=wwXIfr" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-4 col-6">
+          <h6 class="syf-footer-heading">Explore</h6>
+          <ul class="syf-footer-links">
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="programs.html">Programs</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-2 col-md-4 col-6">
+          <h6 class="syf-footer-heading">Get Involved</h6>
+          <ul class="syf-footer-links">
+            <li><a href="volunteer.html">Volunteer</a></li>
+            <li><a href="donate.html">Donate</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4 col-md-4">
+          <h6 class="syf-footer-heading">Reach Us</h6>
+          <ul class="syf-footer-contact">
+            <li><i class="fa-solid fa-location-dot"></i> Gorwa, Vadodara, Gujarat, India</li>
+            <li><i class="fa-solid fa-envelope"></i> samarathod702@gmail.com</li>
+          </ul>
+        </div>
+      </div>
+      <hr class="syf-footer-divider">
+      <div class="d-flex flex-column flex-sm-row justify-content-between align-items-center gap-2">
+        <p class="syf-footer-copy mb-0">&copy; <span id="syfYear"></span> Sanjri Youth Foundation. All rights reserved.</p>
+        <p class="syf-footer-copy mb-0">Together For A Better Tomorrow</p>
+      </div>
+    </div>
+  </footer>
+
+  <button id="syfScrollTop" class="syf-scroll-top" aria-label="Scroll to top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+  <script src="js/form.js"></script>
+</body>
+</html>

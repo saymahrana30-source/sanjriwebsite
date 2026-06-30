@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Donate | Sanjri Youth Foundation</title>
+  <meta name="description" content="Support Sanjri Youth Foundation's blood camps, medical checkups, ration drives, and community welfare programs in Gorwa, Vadodara.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top syf-navbar" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand syf-brand" href="index.html">
+        <img src="images/logo.png" alt="Sanjri Youth Foundation logo" class="syf-logo">
+        <span class="syf-brand-text">
+          Sanjri Youth<br><small>FOUNDATION</small>
+        </span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#syfNav" aria-controls="syfNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="syfNav">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="programs.html">Programs</a></li>
+          <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="volunteer.html">Volunteer</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item ms-lg-2">
+            <a class="btn syf-btn-donate" href="donate.html"><i class="fa-solid fa-heart me-1"></i> Donate</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== PAGE HEADER ===== -->
+  <header class="syf-page-header">
+    <div class="container">
+      <div class="syf-breadcrumb justify-content-center">
+        <a href="index.html">Home</a> <span>/</span> <span>Donate</span>
+      </div>
+      <h1>Support Our Work</h1>
+      <p>Every contribution goes directly toward the next camp, the next ration kit, the next family we reach.</p>
+    </div>
+  </header>
+
+  <!-- ===== WHERE YOUR MONEY GOES ===== -->
+  <section class="syf-section">
+    <div class="container">
+      <div class="text-center syf-reveal">
+        <span class="syf-eyebrow syf-eyebrow-dark">Where It Goes</span>
+        <h2 class="syf-section-title">No office, no overhead &mdash; just direct impact</h2>
+        <p class="syf-section-text syf-mx-auto">We run on volunteer time. Your contribution covers the actual cost of running a camp or drive.</p>
+      </div>
+      <div class="row g-4 mt-4">
+        <div class="col-md-6 col-lg-3 syf-reveal">
+          <div class="syf-donate-use-card">
+            <i class="fa-solid fa-droplet"></i>
+            <h6>Blood &amp; Medical Camps</h6>
+            <p>Tents, refreshments for donors, medical supplies, and doctor coordination.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 syf-reveal">
+          <div class="syf-donate-use-card">
+            <i class="fa-solid fa-basket-shopping"></i>
+            <h6>Ration Kits</h6>
+            <p>Rice, wheat, pulses, oil, sugar, and essentials packed for families in need.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 syf-reveal">
+          <div class="syf-donate-use-card">
+            <i class="fa-solid fa-shirt"></i>
+            <h6>Clothing Drives</h6>
+            <p>Running the Neki Ki Deewar wall and seasonal clothing distribution.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 syf-reveal">
+          <div class="syf-donate-use-card">
+            <i class="fa-solid fa-graduation-cap"></i>
+            <h6>Education Support</h6>
+            <p>Scholarship assistance and learning materials for students in need.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== DONATION FORM ===== -->
+  <section class="syf-section syf-about-snap">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8 syf-reveal">
+          <div class="syf-form-card">
+            <div class="text-center mb-4">
+              <span class="syf-eyebrow syf-eyebrow-dark">Make a Donation</span>
+              <h2 class="syf-section-title">Tell us how you'd like to help</h2>
+              <p class="syf-section-text">Submit your details and amount, and our team will reach out with simple, direct payment options.</p>
+            </div>
+
+            <div id="syfDonateFormSuccess" class="syf-alert-success" role="alert">
+              <i class="fa-solid fa-circle-check"></i>
+              <div>
+                <strong>Thank you for your generosity!</strong>
+                <span>We've received your details and a coordinator will contact you shortly with payment options.</span>
+              </div>
+              <button type="button" class="syf-alert-close" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+
+            <form id="syfDonateForm" class="syf-form" data-success-target="syfDonateFormSuccess" novalidate>
+              <div class="row g-3">
+                <div class="col-12">
+                  <label class="syf-form-label">Select an Amount <span>*</span></label>
+                  <div class="syf-amount-grid">
+                    <button type="button" class="syf-amount-btn" data-amount="500">&#8377;500</button>
+                    <button type="button" class="syf-amount-btn" data-amount="1000">&#8377;1,000</button>
+                    <button type="button" class="syf-amount-btn" data-amount="2500">&#8377;2,500</button>
+                    <button type="button" class="syf-amount-btn" data-amount="5000">&#8377;5,000</button>
+                  </div>
+                  <input type="number" class="form-control syf-form-control mt-3" id="donAmount" name="donAmount" placeholder="Or enter a custom amount (&#8377;)" required min="1">
+                  <div class="syf-form-feedback">Please select or enter a donation amount.</div>
+                </div>
+
+                <div class="col-md-6">
+                  <label for="donName" class="syf-form-label">Full Name <span>*</span></label>
+                  <input type="text" class="form-control syf-form-control" id="donName" name="donName" required minlength="2">
+                  <div class="syf-form-feedback">Please enter your full name.</div>
+                </div>
+                <div class="col-md-6">
+                  <label for="donPhone" class="syf-form-label">Phone Number <span>*</span></label>
+                  <input type="tel" class="form-control syf-form-control" id="donPhone" name="donPhone" required pattern="[0-9]{10}" placeholder="10-digit mobile number">
+                  <div class="syf-form-feedback">Please enter a valid 10-digit phone number.</div>
+                </div>
+                <div class="col-md-6">
+                  <label for="donEmail" class="syf-form-label">Email Address <span>*</span></label>
+                  <input type="email" class="form-control syf-form-control" id="donEmail" name="donEmail" required>
+                  <div class="syf-form-feedback">Please enter a valid email address.</div>
+                </div>
+                <div class="col-md-6">
+                  <label for="donPurpose" class="syf-form-label">Donate Towards <span>*</span></label>
+                  <select class="form-select syf-form-control" id="donPurpose" name="donPurpose" required>
+                    <option value="" selected disabled>Choose an option</option>
+                    <option value="blood">Blood &amp; Medical Camps</option>
+                    <option value="ration">Ration Kits</option>
+                    <option value="clothing">Clothing Drives</option>
+                    <option value="education">Education Support</option>
+                    <option value="general">General Fund &mdash; Wherever Needed</option>
+                  </select>
+                  <div class="syf-form-feedback">Please select where you'd like your donation to go.</div>
+                </div>
+                <div class="col-12">
+                  <div class="form-check syf-form-check">
+                    <input class="form-check-input" type="checkbox" id="donConsent" name="donConsent" required>
+                    <label class="form-check-label" for="donConsent">
+                      I agree to be contacted by Sanjri Youth Foundation regarding this donation. <span>*</span>
+                    </label>
+                    <div class="syf-form-feedback">Please confirm you agree to be contacted.</div>
+                  </div>
+                </div>
+                <div class="col-12 text-center mt-2">
+                  <button type="submit" class="btn syf-btn-primary syf-btn-form">
+                    <i class="fa-solid fa-heart me-2"></i>Submit Donation Request
+                  </button>
+                  <p class="syf-form-note">We don't process online payments directly on this site &mdash; a coordinator will follow up with secure, direct payment options (UPI, bank transfer, or cash at our office).</p>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== OTHER WAYS TO HELP ===== -->
+  <section class="syf-section">
+    <div class="container">
+      <div class="text-center syf-reveal">
+        <span class="syf-eyebrow syf-eyebrow-dark">Other Ways to Help</span>
+        <h2 class="syf-section-title">Money isn't the only way to contribute</h2>
+      </div>
+      <div class="row g-4 mt-4">
+        <div class="col-md-4 syf-reveal">
+          <div class="syf-value-card">
+            <i class="fa-solid fa-hand-holding-heart"></i>
+            <h6>Donate in Kind</h6>
+            <p>Ration items, clothing, or medical supplies are always welcome &mdash; reach out to coordinate a drop-off.</p>
+          </div>
+        </div>
+        <div class="col-md-4 syf-reveal">
+          <div class="syf-value-card">
+            <i class="fa-solid fa-droplet"></i>
+            <h6>Donate Blood</h6>
+            <p>Join our next blood donation camp &mdash; check our <a href="gallery.html">gallery</a> and social pages for upcoming dates.</p>
+          </div>
+        </div>
+        <div class="col-md-4 syf-reveal">
+          <div class="syf-value-card">
+            <i class="fa-solid fa-people-group"></i>
+            <h6>Volunteer Your Time</h6>
+            <p>Can't contribute financially? Your time at a camp is just as valuable. <a href="volunteer.html">Sign up here</a>.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="syf-footer">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4">
+          <a href="index.html" class="syf-footer-brand">
+            <img src="images/logo.png" alt="Sanjri Youth Foundation logo">
+            <span>Sanjri Youth<br><small>FOUNDATION</small></span>
+          </a>
+          <p class="syf-footer-text">A volunteer-driven youth foundation based in Gorwa, Vadodara, working in education, healthcare, women's empowerment, and community welfare.</p>
+          <div class="syf-social">
+            <a href="https://www.facebook.com/share/17QJpF1PeW/?mibextid=wwXIfr" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-4 col-6">
+          <h6 class="syf-footer-heading">Explore</h6>
+          <ul class="syf-footer-links">
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="programs.html">Programs</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-2 col-md-4 col-6">
+          <h6 class="syf-footer-heading">Get Involved</h6>
+          <ul class="syf-footer-links">
+            <li><a href="volunteer.html">Volunteer</a></li>
+            <li><a href="donate.html">Donate</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4 col-md-4">
+          <h6 class="syf-footer-heading">Reach Us</h6>
+          <ul class="syf-footer-contact">
+            <li><i class="fa-solid fa-location-dot"></i> Gorwa, Vadodara, Gujarat, India</li>
+            <li><i class="fa-solid fa-envelope"></i> samarathod702@gmail.com</li>
+          </ul>
+        </div>
+      </div>
+      <hr class="syf-footer-divider">
+      <div class="d-flex flex-column flex-sm-row justify-content-between align-items-center gap-2">
+        <p class="syf-footer-copy mb-0">&copy; <span id="syfYear"></span> Sanjri Youth Foundation. All rights reserved.</p>
+        <p class="syf-footer-copy mb-0">Together For A Better Tomorrow</p>
+      </div>
+    </div>
+  </footer>
+
+  <button id="syfScrollTop" class="syf-scroll-top" aria-label="Scroll to top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+  <script src="js/form.js"></script>
+  <script src="js/donate.js"></script>
+</body>
+</html>
