@@ -96,85 +96,43 @@
     </div>
   </section>
 
-  <!-- ===== DONATION FORM ===== -->
+  <!-- ===== UPI PAYMENT SECTION ===== -->
   <section class="syf-section syf-about-snap">
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-lg-8 syf-reveal">
-          <div class="syf-form-card">
-            <div class="text-center mb-4">
-              <span class="syf-eyebrow syf-eyebrow-dark">Make a Donation</span>
-              <h2 class="syf-section-title">Tell us how you'd like to help</h2>
-              <p class="syf-section-text">Submit your details and amount, and our team will reach out with simple, direct payment options.</p>
+          <div class="syf-form-card text-center">
+            <span class="syf-eyebrow syf-eyebrow-dark">Direct Payment</span>
+            <h2 class="syf-section-title">Scan &amp; Pay via UPI</h2>
+            <p class="syf-section-text mb-4">Use any UPI app to scan the QR code below and donate directly to Sanjri Youth Foundation &mdash; no middleman, no extra steps.</p>
+
+            <!-- QR Code -->
+            <div class="syf-qr-wrap">
+              <img src="images/upi-qr.jpg" alt="Sanjri Youth Foundation UPI QR code — scan to donate" class="syf-qr-img">
             </div>
 
-            <div id="syfDonateFormSuccess" class="syf-alert-success" role="alert">
-              <i class="fa-solid fa-circle-check"></i>
-              <div>
-                <strong>Thank you for your generosity!</strong>
-                <span>We've received your details and a coordinator will contact you shortly with payment options.</span>
-              </div>
-              <button type="button" class="syf-alert-close" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+            <!-- UPI ID -->
+            <div class="syf-upi-id-box">
+              <span class="syf-upi-label">UPI ID</span>
+              <span class="syf-upi-id" id="syfUpiId">UJJ83981798417@Ujjivan</span>
+              <button class="syf-upi-copy" id="syfUpiCopy" title="Copy UPI ID">
+                <i class="fa-regular fa-copy"></i>
+              </button>
+              <span class="syf-upi-copied" id="syfUpiCopied">Copied!</span>
             </div>
 
-            <form id="syfDonateForm" class="syf-form" data-success-target="syfDonateFormSuccess" novalidate>
-              <div class="row g-3">
-                <div class="col-12">
-                  <label class="syf-form-label">Select an Amount <span>*</span></label>
-                  <div class="syf-amount-grid">
-                    <button type="button" class="syf-amount-btn" data-amount="500">&#8377;500</button>
-                    <button type="button" class="syf-amount-btn" data-amount="1000">&#8377;1,000</button>
-                    <button type="button" class="syf-amount-btn" data-amount="2500">&#8377;2,500</button>
-                    <button type="button" class="syf-amount-btn" data-amount="5000">&#8377;5,000</button>
-                  </div>
-                  <input type="number" class="form-control syf-form-control mt-3" id="donAmount" name="donAmount" placeholder="Or enter a custom amount (&#8377;)" required min="1">
-                  <div class="syf-form-feedback">Please select or enter a donation amount.</div>
-                </div>
+            <!-- Accepted Apps -->
+            <p class="syf-upi-apps-label">Accepted on all UPI apps</p>
+            <div class="syf-upi-apps">
+              <span><i class="fa-brands fa-google-pay"></i> Google Pay</span>
+              <span>PhonePe</span>
+              <span>Paytm</span>
+              <span>Amazon Pay</span>
+              <span>BHIM</span>
+              <span>WhatsApp Pay</span>
+            </div>
 
-                <div class="col-md-6">
-                  <label for="donName" class="syf-form-label">Full Name <span>*</span></label>
-                  <input type="text" class="form-control syf-form-control" id="donName" name="donName" required minlength="2">
-                  <div class="syf-form-feedback">Please enter your full name.</div>
-                </div>
-                <div class="col-md-6">
-                  <label for="donPhone" class="syf-form-label">Phone Number <span>*</span></label>
-                  <input type="tel" class="form-control syf-form-control" id="donPhone" name="donPhone" required pattern="[0-9]{10}" placeholder="10-digit mobile number">
-                  <div class="syf-form-feedback">Please enter a valid 10-digit phone number.</div>
-                </div>
-                <div class="col-md-6">
-                  <label for="donEmail" class="syf-form-label">Email Address <span>*</span></label>
-                  <input type="email" class="form-control syf-form-control" id="donEmail" name="donEmail" required>
-                  <div class="syf-form-feedback">Please enter a valid email address.</div>
-                </div>
-                <div class="col-md-6">
-                  <label for="donPurpose" class="syf-form-label">Donate Towards <span>*</span></label>
-                  <select class="form-select syf-form-control" id="donPurpose" name="donPurpose" required>
-                    <option value="" selected disabled>Choose an option</option>
-                    <option value="blood">Blood &amp; Medical Camps</option>
-                    <option value="ration">Ration Kits</option>
-                    <option value="clothing">Clothing Drives</option>
-                    <option value="education">Education Support</option>
-                    <option value="general">General Fund &mdash; Wherever Needed</option>
-                  </select>
-                  <div class="syf-form-feedback">Please select where you'd like your donation to go.</div>
-                </div>
-                <div class="col-12">
-                  <div class="form-check syf-form-check">
-                    <input class="form-check-input" type="checkbox" id="donConsent" name="donConsent" required>
-                    <label class="form-check-label" for="donConsent">
-                      I agree to be contacted by Sanjri Youth Foundation regarding this donation. <span>*</span>
-                    </label>
-                    <div class="syf-form-feedback">Please confirm you agree to be contacted.</div>
-                  </div>
-                </div>
-                <div class="col-12 text-center mt-2">
-                  <button type="submit" class="btn syf-btn-primary syf-btn-form">
-                    <i class="fa-solid fa-heart me-2"></i>Submit Donation Request
-                  </button>
-                  <p class="syf-form-note">We don't process online payments directly on this site &mdash; a coordinator will follow up with secure, direct payment options (UPI, bank transfer, or cash at our office).</p>
-                </div>
-              </div>
-            </form>
+            <p class="syf-form-note mt-3">After paying, you can reach us at <strong>connect@sanjriyouthfoundation.org</strong> or on <a href="https://www.facebook.com/share/17QJpF1PeW/?mibextid=wwXIfr" target="_blank" rel="noopener">Facebook</a> to let us know which program you'd like your donation to support.</p>
           </div>
         </div>
       </div>
@@ -248,7 +206,7 @@
           <h6 class="syf-footer-heading">Reach Us</h6>
           <ul class="syf-footer-contact">
             <li><i class="fa-solid fa-location-dot"></i> Gorwa, Vadodara, Gujarat, India</li>
-            <li><i class="fa-solid fa-envelope"></i> samarathod702@gmail.com</li>
+            <li><i class="fa-solid fa-envelope"></i> connect@sanjriyouthfoundation.org</li>
           </ul>
         </div>
       </div>
@@ -266,7 +224,16 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
   <script src="js/script.js"></script>
-  <script src="js/form.js"></script>
-  <script src="js/donate.js"></script>
+  <script>
+    // Copy UPI ID to clipboard
+    document.getElementById('syfUpiCopy').addEventListener('click', function () {
+      var upiId = document.getElementById('syfUpiId').textContent;
+      navigator.clipboard.writeText(upiId).then(function () {
+        var copied = document.getElementById('syfUpiCopied');
+        copied.classList.add('syf-upi-copied-show');
+        setTimeout(function () { copied.classList.remove('syf-upi-copied-show'); }, 2000);
+      });
+    });
+  </script>
 </body>
 </html>
